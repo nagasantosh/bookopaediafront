@@ -27,7 +27,6 @@ export default function App() {
     <div>
       <header>
         <h1>Bookopaedia: Library for kids and adults</h1>
-        <p>{books.length} books</p>
       </header>
       <div>
         <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search" />
