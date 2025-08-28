@@ -25,6 +25,7 @@ export default function BookCard({ book, onSubmitted }) {
       <img src={book.image_src || 'https://via.placeholder.com/300x180?text=No+Image'} alt={book.title} />
       <h3>{book.title}</h3>
       <p>{book.author}</p>
+      <p>{book.age_group}</p>
       <p>{book.description}</p>
       <p>{book.is_available ? 'Available' : 'Not Available'}</p>
       <button onClick={() => setOpen(true)} disabled={!book.is_available}>Read The Book</button>
