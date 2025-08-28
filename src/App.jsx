@@ -26,7 +26,7 @@ export default function App() {
   return (
     <div>
       <header>
-        <h1>Library</h1>
+        <h1>Bookopaedia: Library for kids and adults</h1>
         <p>{books.length} books</p>
       </header>
       <div>
