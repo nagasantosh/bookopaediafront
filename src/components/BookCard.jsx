@@ -5,8 +5,6 @@ export default function BookCard({ book, onSubmitted }) {
   const [open, setOpen] = useState(false)
   const [email, setEmail] = useState('')
   const [mobile, setMobile] = useState('')
-  const [yourname, setName] = useState('')
-  const [flatNo, setFlatNo] = useState('')
   const [message, setMessage] = useState('')
 
   const submit = async (e) => {
@@ -16,8 +14,6 @@ export default function BookCard({ book, onSubmitted }) {
       setMessage('Request submitted!')
       setEmail('')
       setMobile('')
-      setName('')
-      setFlatNo('')
       onSubmitted?.()
     } catch {
       setMessage('Submission failed.')
@@ -41,8 +37,6 @@ export default function BookCard({ book, onSubmitted }) {
             <form onSubmit={submit}>
               <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required />
               <input type="tel" value={mobile} onChange={e => setMobile(e.target.value)} placeholder="Mobile" required />
-              <input type="text" value={yourname} onChange={e => setName(e.target.value)} placeholder="Name" required />
-              <input type="text" value={flatNo} onChange={e => setFlatNo(e.target.value)} placeholder="Flat No" required />
               <p>{message}</p>
               <button type="submit">Submit</button>
               <button type="button" onClick={() => setOpen(false)}>Cancel</button>
